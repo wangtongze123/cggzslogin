@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>橙果工作室登录系统</title>
+		<style type="text/css">
+			#bgbox{
+				width: 100%;
+				height: 700px;
+				background-color:rgb(145,197,17);
+				}
+			#midbox{
+				width: 700px;
+				height: 400px;
+				background-color: rgb(124,184,106);
+				/* border: 1px solid #333; */
+				border-radius: 10px;
+				position: absolute;
+				left: 410px;
+			}
+			.img{
+				width: 400px;
+				height: 100px;
+				/* border: 1px solid #333; */
+				position: absolute;
+				left: 150px;
+				top: 0px;
+				
+				}
+			#loginName{
+				height: 30px;
+				position: absolute;
+				top: 120px;
+				left:200px ;
+			}
+			#yhm{
+				position: absolute;
+				top: 100px;
+				left: 200px;
+			}
+			#mm
+			{
+				position: absolute;
+				top: 160px;
+				left: 200px;
+				
+			}
+			#password
+			{
+				height: 30px;
+				position: absolute;
+				top:180px ;
+				left: 200px;
+			}
+			#jz{
+				position: absolute;
+				left: 200px;
+				top: 220px;
+			}
+			#dl{
+				position: absolute;
+				left: 200px;
+				top: 250px;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="bgbox">
+			<center><font class="1" size="23" color="blueviolet" face="楷体">橙果工作室成员管理系统</font></center>
+			<div id="midbox">
+				<div class="img">
+					<img src="img/nZbVmt.png" width="400px" height="100px">
+					
+				</div>
+				<div id="yhm">
+					用户名：
+				</div>
+				<input  id="loginName"  type="text" size="40"  placeholder="Enter username" /> 
+				<div id="mm">
+					密码：
+				</div>
+				<input  id="password"  type="password" size="40"  placeholder="Enter password" /> 
+				<div id="jz">
+					<input type="checkbox" name="" id="jzmm" value="" /> &nbsp;&nbsp;记住密码
+				</div>
+				<div id="dl">
+					<button id="login" type="button" style="width: 300px;height: 30px;background: rgb(0,123,255);">登录</button>
+				</div>
+			</div>
+			 
+		</div>
+		<script type="text/javascript">
+			oBtn = document.getElementById("login")
+			oYH = document.getElementById("loginName")
+			opassword = document.getElementById("password")
+			
+			//按钮绑定事件
+			oBtn.onclick = function()
+			{
+				//先判断格式
+				//1.先驱获得用户名和密码
+				var ipt_YH = oYH.value
+				var ipt_password = opassword.value
+				// console.log(ipt_YH , ipt_password)
+				//判断用户名是否为空
+				if(ipt_YH == ""){
+					alert("输入的用户名或密码格式不正确 用户名：cggzs 密码：123456")
+				return
+			}
+			    //判断密码是否为空
+				if(ipt_password == "")
+				{
+					alert("输入的用户名或密码格式不正确 用户名：cggzs 密码：123456")
+					return
+				}
+			    //判断用户名和密码是否正确
+		        if(ipt_YH === "cggzs" && ipt_password === "123456")
+				{
+					// alert("登录成功")
+					// setTimeout(function(){location.href="https://cggzs.cn/";},2000);
+					window.location = 'https://cggzs.cn/'
+				}
+				else
+				{
+					alert("输入的用户名或密码错误 用户名：cggzs 密码：123456")
+				}
+			
+			}
+		</script>
+	</body>
+</html>
