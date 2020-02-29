@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script type="text/javascript" src="./jquery-3.4.1.js">
+					
+				</script>
 		<meta charset="utf-8">
 		<title>橙果工作室登录系统</title>
 		<style type="text/css">
@@ -61,6 +64,9 @@
 				position: absolute;
 				left: 200px;
 				top: 250px;
+				}
+				#login{
+					cursor: pointer;
 				}
 		</style>
 	</head>
@@ -127,5 +133,17 @@
 			
 			}
 		</script>
+		<script type="text/javascript">
+				 $("#login").mouseover(function(){
+				        $(this).css({
+							"background": "linear-gradient(to right bottom,rgb(255,253,246) 100%,rgb(28,160,53) 100%)",
+				        });
+				    });
+				 $("#login").mouseout(function(){
+				        $(this).css({
+							"background": "linear-gradient(blue,blue)",
+				        });
+				    });	
+			</script>
 	</body>
 </html>
